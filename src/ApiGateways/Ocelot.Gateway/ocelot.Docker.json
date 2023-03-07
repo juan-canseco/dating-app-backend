@@ -1,0 +1,103 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/swipes",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "matching.api",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/swipes",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/swipes/{swipeId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "matching.api",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/swipes/{swipeId}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/swipes/{userId}/all/received",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "matching.api",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/swipes/{userId}/all/received",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/swipes/{userId}/delivered",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "matching.api",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/swipes/{userId}/delivered",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/swipes/{userId}/right/received",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "matching.api",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/swipes/{userId}/right/received",
+      "UpstreamHttpMethod": ["GET"]
+    },
+    {
+      "DownstreamPathTemplate": "/api/matches/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "matching.api",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/matches/{id}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/matches/{userId}/all",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "matching.api",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/matches/{userId}/all",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/matches/{userOneId}/{userTwoId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "matching.api",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/matches/{userOneId}/{userTwoId}",
+      "UpstreamHttpMethod": [ "GET" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:8001"
+  }
+}

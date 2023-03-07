@@ -33,4 +33,11 @@ services:
     ports:
       - "8000:80"
 
-
+  ocelot.gateway:
+    container_name: ocelot.gateway
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker
+    depends_on:
+      - matching.api
+    ports:
+      - "8001:80"

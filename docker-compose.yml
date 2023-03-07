@@ -15,3 +15,10 @@ services:
     build:
       context: .
       dockerfile: src/Services/Matching/Matching.Api/Dockerfile
+
+  ocelot.gateway:
+    image: ${DOCKER_REGISTRY-}ocelotgateway
+    build:
+      context: .
+      dockerfile: src/ApiGateways/Ocelot.Gateway/Dockerfile
+
