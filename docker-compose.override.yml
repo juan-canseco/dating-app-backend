@@ -31,7 +31,7 @@ services:
       - cache
       - mssql
     ports:
-      - "8000:80"
+      - "80"
 
   ocelot.gateway:
     container_name: ocelot.gateway
@@ -39,5 +39,15 @@ services:
       - ASPNETCORE_ENVIRONMENT=Docker
     depends_on:
       - matching.api
+      - identity.server
     ports:
       - "8001:80"
+
+  identity.server:
+    container_name: identity.server
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker
+    depends_on:
+      - mssql
+    ports:
+      - "80"

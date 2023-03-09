@@ -22,3 +22,10 @@ services:
       context: .
       dockerfile: src/ApiGateways/Ocelot.Gateway/Dockerfile
 
+
+  identity.server:
+    image: ${DOCKER_REGISTRY-}identityserver
+    build:
+      context: .
+      dockerfile: src/Services/Identity/Identity.Server/Dockerfile
+

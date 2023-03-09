@@ -1,6 +1,78 @@
 {
   "Routes": [
     {
+      "DownstreamPathTemplate": "/api/genders",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "identity.server",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/profile/genders",
+      "UpstreamHttpMethod":  ["GET"]
+    },
+    {
+      "DownstreamPathTemplate": "/api/genders/{genderId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "identity.server",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/profile/genders/{genderId}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/orientations",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "identity.server",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/profile/orientations",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/orientations/{orientationId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "identity.server",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/profile/orientations/{orientationId}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/interests",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "identity.server",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/profile/interests",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/interests/{interestId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "identity.server",
+          "Port": "80"
+        }
+      ],
+      "UpstreamPathTemplate": "/api/profile/interests/{interestId}",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+    {
       "DownstreamPathTemplate": "/api/swipes",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -58,7 +130,7 @@
         }
       ],
       "UpstreamPathTemplate": "/api/swipes/{userId}/right/received",
-      "UpstreamHttpMethod": ["GET"]
+      "UpstreamHttpMethod": [ "GET" ]
     },
     {
       "DownstreamPathTemplate": "/api/matches/{id}",
